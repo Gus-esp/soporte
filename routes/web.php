@@ -18,6 +18,11 @@ use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\Auth\LoginController;
 
+Route::get('/', function () {
+    return view('welcome'); // Asegúrate de que esta vista sea la correcta
+});
+
+
 //ruta para creacion de usuarios
 Route::get('usuarios/create', [UserController::class, 'create'])->name('usuarios.create');
 Route::post('usuarios/store', [UserController::class, 'store'])->name('usuarios.store');
