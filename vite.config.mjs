@@ -1,14 +1,17 @@
-import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import path from 'path'
 
 export default defineConfig({
-  plugins: [
-    laravel({
-      input: [
-        'resources/css/app.css',  // archivo de entrada CSS
-        'resources/js/app.js',     // archivo de entrada JS
-      ],
-      refresh: true, 
-    }),
-  ],
-});
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './resources/js'),
+    },
+  },
+  server: {
+    proxy: {
+      '/app': 'http://localhost',
+    },
+  },
+})
