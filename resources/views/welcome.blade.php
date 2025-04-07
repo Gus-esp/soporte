@@ -3,11 +3,11 @@
     <head>
     <!-- Swiper.js CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Importadora Martínez - Reparación de Celulares </title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/js/app.js')
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <style>
