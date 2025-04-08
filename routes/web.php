@@ -92,7 +92,7 @@ Route::post('/solicitud-reparacion', [SolicitudReparacionController::class, 'sto
 
 // Ruta principal de la página
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 // Ruta para actualizar el estado del celular desde la sucursal

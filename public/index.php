@@ -12,7 +12,7 @@
 
     <style>
        .hero-bg {                                   
-        background: linear-gradient(to right, rgba(255, 151, 151, 0.8), rgb(253, 72, 72), rgba(255, 151, 151, 0.8)),   url("{{ asset('imagenes/fondo2.jpg') }}");
+        background: linear-gradient(to right, rgba(255, 151, 151, 0.8), rgb(253, 72, 72), rgba(255, 151, 151, 0.8)),    url("/imagenes/fondo2.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed; /* Hace que el fondo permanezca fijo al hacer scroll */
@@ -28,7 +28,7 @@
             animation: gradient 3s ease infinite;
         }
         .hero-tg {
-            background-image:  linear-gradient(to right, rgba(119, 119, 119, 0.8), rgba(120, 119, 119, 0.8)), url("{{ asset('imagenes/fondo22.png') }}"); /* Reemplaza con la URL de tu imagen */
+            background-image:  linear-gradient(to right, rgba(119, 119, 119, 0.8), rgba(120, 119, 119, 0.8)),  url("/imagenes/fondo2.jpg"); /* Reemplaza con la URL de tu imagen */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -85,7 +85,7 @@
 <body class="hero-bg text-gray-700">
     <!-- Navbar -->
     <nav class="bg-gradient-to-r from-red-600 to-red-800 p-6 flex justify-between items-center text-white shadow-lg rounded-b-lg">
-      <img src="{{ asset('imagenes/logo2.jpg') }}" alt="Logo Importadora Martínez" class="h-10 w-20">
+    <img src="/imagenes/logo2.jpg" alt="Logo Importadora Martínez" class="h-10 w-20">
     <ul class="flex space-x-4">
     <li>
         <a href="/welcome" class="text-lg font-semibold hover:text-red-200 transition duration-300 transform hover:scale-105">
@@ -93,7 +93,7 @@
         </a>
         </li>
         <li>
-        <a href="{{ route('trabaja.index') }}" class="text-lg font-semibold hover:text-red-200 transition duration-300 transform hover:scale-105">
+        <a href="/trabaja" class="text-lg font-semibold hover:text-red-200 transition duration-300 transform hover:scale-105">
             Trabaja con nosotros
         </a>
         </li>
@@ -103,13 +103,13 @@
         </a>
         </li>
         <li>
-            <a href="{{ url('login') }}" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 hover:shadow-xl">Iniciar sesión</a>
+        <a href="/login" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 hover:shadow-xl">Iniciar sesión</a>
         </li>
     </ul>
 </nav>
     <!-- Hero Section -->
     <section class="hero-tg text-white text-center py-50">
-        <h2 class="hero-title mt-[-150px]">IMPORTADORA Y hospital DE CELULARES MARTINEZ</h2>
+        <h2 class="hero-title mt-[-150px]">IMPORTADORA Y CLINICA DE CELULARES MARTINEZ</h2>
         <p class="hero-subtitle text-white mt-40">¡Tu celular en manos profesionales!</p>
         <div class="flex justify-center space-x-4 my-6">
             
@@ -136,22 +136,23 @@
         <!-- Contenedor de las imágenes -->
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="{{ asset('imagenes/gio.png') }}" alt="Imagen 1" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+
+                <img src="/imagenes/gio.png" alt="Imagen 1" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
             </div>
             <div class="swiper-slide">
-                <img src="{{ asset('imagenes/m1.jpg') }}" alt="Imagen 2" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+                <img src='/imagenes/m1.jpg' alt="Imagen 2" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
             </div>
             <div class="swiper-slide">
-                <img src="{{ asset('imagenes/m2.jpg') }}" alt="Imagen 3" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+                <img src='/imagenes/m2.jpg' alt="Imagen 3" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
             </div>
             <div class="swiper-slide">
-                <img src="{{ asset('imagenes/nezva.jpg') }}" alt="Imagen 4" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+                <img src='/imagenes/nezva.jpg' alt="Imagen 4" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
             </div>
             <div class="swiper-slide">
-                <img src="{{ asset('imagenes/m5.jpg') }}" alt="Imagen 5" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+                <img src='/imagenes/m5.jpg' alt="Imagen 5" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
             </div>
             <div class="swiper-slide">
-                <img src="{{ asset('imagenes/m4.jpg') }}" alt="Imagen 6" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
+                <img src='/imagenes/m4.jpg' alt="Imagen 6" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105">
             </div>
         </div>
 
@@ -171,9 +172,9 @@
             <h3 class="text-2xl font-semibold mb-4 text-center text-red-600">Cambio de Pantalla</h3>
             <div class="swiper servicio-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/panta1.3.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pantalla 1"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/panta2.2.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pantalla 2"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/panta1.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pantalla 3"></div>
+                    <div class="swiper-slide"><img src='/imagenes/panta1.3.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pantalla 1"></div>
+                    <div class="swiper-slide"><img src='/imagenes/panta2.2.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pantalla 2"></div>
+                    <div class="swiper-slide"><img src='/imagenes/panta1.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pantalla 3"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -184,9 +185,9 @@
             <h3 class="text-2xl font-semibold mb-4 text-center text-red-600">Cambio de Glass</h3>
             <div class="swiper servicio-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/glas1.1.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Glass 1"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/glass2.2.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Glass 2"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/glass3.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Glass 3"></div>
+                    <div class="swiper-slide"><img src='/imagenes/glas1.1.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Glass 1"></div>
+                    <div class="swiper-slide"><img src='/imagenes/glass2.2.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Glass 2"></div>
+                    <div class="swiper-slide"><img src='/imagenes/glass3.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Glass 3"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -197,9 +198,9 @@
             <h3 class="text-2xl font-semibold mb-4 text-center text-red-600">Cambio de Módulo</h3>
             <div class="swiper servicio-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/mod1.2.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Módulo 1"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/mod2.3.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Módulo 2"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/mod3.3.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Módulo 3"></div>
+                    <div class="swiper-slide"><img src='/imagenes/mod1.2.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Módulo 1"></div>
+                    <div class="swiper-slide"><img src='/imagenes/mod2.3.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Módulo 2"></div>
+                    <div class="swiper-slide"><img src='/imagenes/mod3.3.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Módulo 3"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -210,9 +211,9 @@
             <h3 class="text-2xl font-semibold mb-4 text-center text-red-600">Cambio de Pin de Carga</h3>
             <div class="swiper servicio-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/pin1.png') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pin de Carga 1"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/pin2.2.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pin de Carga 2"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/pin3.3.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pin de Carga 3"></div>
+                    <div class="swiper-slide"><img src='/imagenes/pin1.png' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pin de Carga 1"></div>
+                    <div class="swiper-slide"><img src='/imagenes/pin2.2.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pin de Carga 2"></div>
+                    <div class="swiper-slide"><img src='/imagenes/pin3.3.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Pin de Carga 3"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -223,9 +224,9 @@
             <h3 class="text-2xl font-semibold mb-4 text-center text-red-600">Reparación de Placa</h3>
             <div class="swiper servicio-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/placa1.1.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Reparación de Placa 1"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/placa2.jpg') }}" class="w-full h-80 object-cover rounded-lg" alt="Reparación de Placa 2"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/placa2.2.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Reparación de Placa 3"></div>
+                    <div class="swiper-slide"><img src='/imagenes/placa1.1.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Reparación de Placa 1"></div>
+                    <div class="swiper-slide"><img src='/imagenes/placa2.jpg' class="w-full h-80 object-cover rounded-lg" alt="Reparación de Placa 2"></div>
+                    <div class="swiper-slide"><img src='/imagenes/placa2.2.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Reparación de Placa 3"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -236,9 +237,9 @@
             <h3 class="text-2xl font-semibold mb-4 text-center text-red-600">Cambio de Batería</h3>
             <div class="swiper servicio-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/bat11.jpeg') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Batería 1"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/bat2.png') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Batería 2"></div>
-                    <div class="swiper-slide"><img src="{{ asset('imagenes/bat3.png') }}" class="w-full h-80 object-cover rounded-lg" alt="Cambio de Batería 3"></div>
+                    <div class="swiper-slide"><img src='/imagenes/bat11.jpeg' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Batería 1"></div>
+                    <div class="swiper-slide"><img src='/imagenes/bat2.png' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Batería 2"></div>
+                    <div class="swiper-slide"><img src='/imagenes/bat3.png' class="w-full h-80 object-cover rounded-lg" alt="Cambio de Batería 3"></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -268,9 +269,9 @@
         <h3 class="text-2xl font-semibold mb-4 text-center text-white hover:text-red-300">Sucursal La Paz</h3>
         <div class="swiper sucursal-swiper mt-4">
             <div class="swiper-wrapper">
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/lpz1.png') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/lpz2.png') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/lpz3.png') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/lpz1.png' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/lpz2.png' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/lpz3.png' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -284,9 +285,9 @@
         <h3 class="text-2xl font-semibold mb-4 text-center text-white hover:text-red-300">Sucursal UPEA</h3>
         <div class="swiper sucursal-swiper mt-4">
             <div class="swiper-wrapper">
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/upea1.jpeg') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/upea2.jpeg') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/upea3.jpeg') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/upea1.jpeg' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/upea2.jpeg' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/upea3.jpeg' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -300,9 +301,9 @@
         <h3 class="text-2xl font-semibold mb-4 text-center text-white hover:text-red-300">Sucursal Ceja</h3>
         <div class="swiper sucursal-swiper mt-4">
             <div class="swiper-wrapper">
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/ceja1.png') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/ceja2.2.jpeg') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
-                <div class="swiper-slide flex justify-center items-center"><img src="{{ asset('imagenes/ceja3.jpeg') }}" class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/ceja1.png' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/ceja2.2.jpeg' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
+                <div class="swiper-slide flex justify-center items-center"><img src='/imagenes/ceja3.jpeg' class="w-full h-50 object-cover rounded-lg hover:opacity-80 transition duration-300"></div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
