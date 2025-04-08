@@ -1,30 +1,25 @@
-# Usa una imagen oficial de PHP con Apache
-FROM php:8.1-apache
+FROM php:8.2-apache
 
-# Instala las dependencias necesarias
-RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev zip git
+# Instala dependencias necesarias
+RUN apt-get update && apt-get install -y \
+    git unzip zip libzip-dev libpng-dev libonig-dev libxml2-dev \
+    && docker-php-ext-install pdo_mysql zip
 
-# Habilita módulos necesarios para Apache
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd
+# Habilita mod_rewrite
+RUN a2enmod rewrite
 
-# Instala Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# Cambia el DocumentRoot a /var/www/html/public
+RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
 
-# Copia el código de tu proyecto al contenedor
+# Copia los archivos del proyecto
 COPY . /var/www/html
+
+# Cambia permisos
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Establece el directorio de trabajo
 WORKDIR /var/www/html
 
-# Instala las dependencias de Composer
-RUN composer install --no-dev --optimize-autoloader
-
-# Establece permisos adecuados para las carpetas de Laravel
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-
-# Expón el puerto 80 para que Apache lo escuche
+# Expone el puerto 80
 EXPOSE 80
-
-# Inicia el servidor Apache
-CMD ["apache2-foreground"]
