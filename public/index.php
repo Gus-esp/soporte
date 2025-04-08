@@ -109,7 +109,7 @@
 </nav>
     <!-- Hero Section -->
     <section class="hero-tg text-white text-center py-50">
-        <h2 class="hero-title mt-[-150px]">IMPORTADORA Y CLINICA DE CELULARES MARTINEZ</h2>
+        <h2 class="hero-title mt-[-150px]">IMPORTADORA Y hospital DE CELULARES MARTINEZ</h2>
         <p class="hero-subtitle text-white mt-40">¡Tu celular en manos profesionales!</p>
         <div class="flex justify-center space-x-4 my-6">
             
