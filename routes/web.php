@@ -18,6 +18,13 @@ use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\Auth\LoginController;
 
+Route::get('/', function () {
+    return file_get_contents(resource_path('views/index.php'));
+});
+
+Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
+
+
 //ruta para creacion de usuarios
 Route::get('usuarios/create', [UserController::class, 'create'])->name('usuarios.create');
 Route::post('usuarios/store', [UserController::class, 'store'])->name('usuarios.store');

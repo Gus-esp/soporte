@@ -102,8 +102,11 @@
             Contacto
         </a>
         </li>
+
         <li>
-        <a href="{{ route('login') }}" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 hover:shadow-xl">Iniciar sesión</a>
+        <a href="{{ route('login') }}" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105 hover:shadow-xl">
+            Iniciar sesión
+        </a>
         </li>
     </ul>
 </nav>

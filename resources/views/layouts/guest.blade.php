@@ -7,57 +7,15 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Cargar estilos y scripts -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-        <!-- Estilos adicionales -->
-        <style>
-            /* Imagen de fondo */
-            body {
-                background: url('/imagenes/fondo.png') no-repeat center center fixed;
-                background-size: cover;
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            /* Agregar un filtro de color rojo con transparencia */
-            .overlay {
-                background: rgba(183, 28, 28, 0.6); /* Rojo oscuro con opacidad */
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-
-            /* Tarjeta de login */
-            .login-container {
-                position: relative;
-                z-index: 10;
-                background: white;
-                padding: 2rem;
-                border-radius: 8px;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-                max-width: 400px;
-                width: 100%;
-            }
-        </style>
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body>
-        <!-- Capa roja transparente sobre la imagen -->
-        <div class="overlay"></div>
-
-        <!-- Contenedor del login -->
-        <div class="login-container">
-            <h2 class="text-2xl font-bold text-center text-red-600 mt-4">Bienvenido</h2>
-            <p class="text-center text-gray-600">Ingresa tus datos para continuar</p>
-
-            <div class="mt-6">
-                {{ $slot }}
-            </div>
+        <div class="font-sans text-gray-900 antialiased">
+            {{ $slot }}
         </div>
     </body>
 </html>

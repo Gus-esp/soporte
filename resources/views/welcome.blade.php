@@ -17,7 +17,7 @@
         background-position: center;
         background-attachment: fixed; /* Hace que el fondo permanezca fijo al hacer scroll */
     }
-        /* Texto animado con gradiensswedredrwsedr4te */
+        /* Texto animado con gradiensswedredrwsedr4te */git push -u origin main
         .hero-title {
             background: linear-gradient(90deg, rgb(255, 220, 220), rgb(255, 255, 255), rgb(255, 220, 220));
             -webkit-background-clip: text;
